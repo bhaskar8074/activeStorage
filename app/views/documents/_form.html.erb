@@ -1,0 +1,15 @@
+<%= form_with(model: @document, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pdf_file, "PDF File" %>
+    <%= form.file_field :pdf_file %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
