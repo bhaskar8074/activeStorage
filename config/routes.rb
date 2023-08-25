@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :documents
   root "documents#new"
+  get "notfound" => "notfound#index"
+  get '*path', to: redirect('/notfound')
+
+
 end
